@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KTU CGPA Pro 🧮</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>🧮 KTU CGPA Pro</h1>
+  <p class="subtitle">Enter grades. Get CGPA. Plan your target.</p>
+
+  <div id="subjects">
+    <div class="subject-row">
+      <input type="text" placeholder="Subject 1" class="sub-name">
+      <select class="grade">
+        <option value="10">S - 10</option>
+        <option value="9">A+ - 9</option>
+        <option value="8.5">A - 8.5</option>
+        <option value="8">B+ - 8</option>
+        <option value="7">B - 7</option>
+        <option value="6">C+ - 6</option>
+        <option value="5.5">C - 5.5</option>
+        <option value="5">D - 5</option>
+        <option value="0">F - 0</option>
+      </select>
+      <input type="number" placeholder="Credits" class="credit" value="3">
+    </div>
+  </div>
+
+  <button onclick="addSubject()">+ Add Subject</button>
+  <button class="calc" onclick="calculateCGPA()">Calculate CGPA</button>
+
+  <div id="result"></div>
+
+  <div class="target-box">
+    <h3>🎯 Target CGPA Planner</h3>
+    <input type="number" id="targetCGPA" placeholder="Your Target CGPA" step="0.01">
+    <button onclick="planTarget()">Plan It</button>
+    <p id="targetResult"></p>
+  </div>
+
+  <button onclick="copyResult()">📋 Copy Result</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
